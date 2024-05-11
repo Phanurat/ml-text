@@ -32,6 +32,9 @@ test_texts = ["ดีใจ"]
 test_sequences = tokenizer.texts_to_sequences(test_texts)
 max_sequence_length = max([len(seq) for seq in test_sequences])
 test_padded_sequences = pad_sequences(test_sequences, maxlen=max_sequence_length, padding='post')
+# ตรวจสอบข้อมูล test_texts
+print(tokenizer.texts_to_sequences(test_texts))
+
 
 # ทำการทำนาย
 predictions = model.predict(test_padded_sequences)
