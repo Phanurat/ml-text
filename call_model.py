@@ -12,7 +12,7 @@ with open('tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
 
 # เตรียมข้อความที่ต้องการทำนาย
-texts = ["ดีใจ"]
+texts = ["ยกระดับอาหารไทย", "ส่งเสริมๆ"]
 
 # แปลงข้อความเป็นลิสต์ของตัวเลข (sequences)
 sequences = tokenizer.texts_to_sequences(texts)

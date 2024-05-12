@@ -5,7 +5,7 @@ from tensorflow.keras.layers import Embedding, LSTM, Dense
 from tensorflow.keras.models import Sequential
 
 # ข้อมูลตัวอย่าง (ประโยคภาษาไทย)
-texts = ["ดีใจด้วย", "เป็นกำลังใจ"]
+texts = ["สุดยอดดด", "เยี่ยมมม"]
 
 # แปลงข้อความเป็นตัวเลข
 tokenizer = Tokenizer()
