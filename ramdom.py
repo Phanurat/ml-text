@@ -3,8 +3,18 @@ import pandas as pd
 import os
 
 null = ""
-Sub = ["นายก", "คุณเศรษฐา", "นายกนิด", "นายกเศรษฐา", 'คุณนิด', 'ท่านนายก', 'เพื่อไทย']
-Vis = ["เก่งจังเลย", "เยี่ยมมากเลย", "ทำดีตลอด", "มีความผู้นำจริงๆ", "เหนื่อยแทนประชาชนตลอด", "ดูแลตัวเองด้วยนะ", "เก่งๆ ยอมเลย", "โคตะระเป็นทุกอย่างเลย"]
+# อ่านข้อมูล Sub
+with open('data/sub.txt', 'r', encoding='utf-8') as f:
+    Sub = f.readlines()
+
+# อ่านข้อมูล Vis
+with open('data/vis.txt', 'r', encoding='utf-8') as f:
+    Vis = f.readlines()
+
+# ลบช่องว่างหรือ newline character ออกจากแต่ละบรรทัด
+Sub = [line.strip() for line in Sub]
+Vis = [line.strip() for line in Vis]
+
 Noun = "ชาติ"
 Pnoun = "เรา"
 Act = "ตก"
